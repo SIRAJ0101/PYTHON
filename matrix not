@@ -1,0 +1,23 @@
+a=[[81,82,83,84,85,86],
+   [11,12,13,14,15,16],
+   [61,62,63,64,65,66],
+   [41,42,43,44,45,46],
+   [51,52,53,54,55,56]]
+   
+top=0
+bottom=len(a)-1
+left=0
+right=len(a[0])-1
+
+for i in range(top,right+1):
+    print(a[top][i],end=" ")
+top=top+1
+
+for i in range(top,bottom+1):
+    print(a[i][right],end=" ")
+right=right-1
+
+if top<=bottom:
+        for i in range(right,left-1,-1):
+            print(a[bottom][i],end=" ")
+        bottom=bottom+1
